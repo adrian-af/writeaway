@@ -10,6 +10,6 @@
     <h1>Log In Form</h1>
     <p>* Form content *</p>
     <a href="Lobby.php"><button>Log In</button></a><br>
-    <p>Not with us yet?</p><a href="SignIn.php"><button>Sig in!!</button></a>
+    <p>Not with us yet?</p><a href="SignIn.php"><button>Sign in!!</button></a>
 </body>
 </html>

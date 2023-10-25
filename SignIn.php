@@ -7,9 +7,15 @@
     <title>SignIn</title>
 </head>
 <body>
-    <h1>Sing In form</h1>
-    <p>* Form content *</p>
-    <a href="Lobby.php"><button>Sig In</button></a>
+    <h1>Sign In form</h1>
+    <form action="./LogInCode.php">
+        <label for="email">Email</for>
+        <input type="email" id="email" name="email"></input>
+        <label for="pass">Password</for>
+        <input type="password" id="pass" name="pass"></input>
+        <a href="Lobby.php"><button>Sig In</button></a>
+
+    </form>
     <!-- Send user name and password @ email -->
 </body>
 </html>
