@@ -1,4 +1,4 @@
-body{
+body.lobby{
     overflow: auto;
     background-image: "descarga.jpeg";
 }
