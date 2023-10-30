@@ -20,11 +20,11 @@ include "./dbfunctions.php";
                 $result = connectionToDB($query);
                 if($result->rowCount() > 0) //if the query returns nothing, the email is not registered
                 {
-                    
-                    foreach($result as $line)
+                    foreach($result as $line) //takes each result of the query
                     {
-                        $temp = ucfirst($line['name']);
-                        echo " <option value='$temp'>$temp</option>";
+                        $temp = ucfirst($line['name']); //capital first letter so it looks nicer
+                        $tempNum = $line['ID'];
+                        echo "<option value='$tempNum'>$temp</option>"; //this adds an option for each genre with the value of its name
                     }
                 }
                 else

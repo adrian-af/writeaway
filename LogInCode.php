@@ -21,7 +21,7 @@ if(isset($_GET['email']))
     {
         $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
         $query = "SELECT * FROM users WHERE email = '$email' AND password = '$hashedPass'";
-        $result = $db->query($query);
+        $result = connectionToDB($query);
         if($result->rowCount() > 0) //if the query returns something, the login info is correct
         {
             $user = $result->fetch();
