@@ -15,7 +15,6 @@
         {
             $text = "Wrong!";
             $email = $_GET['email'];
-            $username = $_GET['username'];
 
             if($_GET['errorEmail'] == '1')
             {
@@ -35,7 +34,7 @@
         <input type="email" id="email" name="email"></input><br>
         <label for="pass">Password</for>
         <input type="password" id="pass" name="pass"></input><br>
-        <a href="Lobby.php"><button>Sig In</button></a>
+        <button>Log in</button>
     </form>
     <p>Not with us yet?</p><a href="SignIn.php">Sign in!!</a>
 </body>

@@ -10,11 +10,9 @@ if(isset($_GET['email']))
     $errorPass = 0;
     $error = 0;
 
-    //gets the database information into $res from the configuration xml file and checks it complies with the xsd schema
-    $res = load_config(dirname(__FILE__)."/configuration.xml", dirname(__FILE__)."/configuration.xsd");
-    $db = new PDO($res[0], $res[1], $res[2]); //connexion to DB
+    
     $query = "SELECT * FROM users WHERE email = '$email'"; //checks if the email is registered
-    $result = $db->query($query);
+    $result = connectionToDB($query);
     if($result->rowCount() == 0) //if the query returns nothing, the email is not registered
     {
         $errorEmail = 1;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-10-2023 a las 20:21:20
+-- Tiempo de generación: 26-10-2023 a las 19:48:31
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -73,6 +73,15 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`ID`, `email`, `username`, `password`) VALUES
+(1, 'abc@def.com', 'user1', '$2y$10$uXdkXi2znRFwYmZYXRy4mewcqegPbYUddIS92njbwSo8zXmh5rYaS'),
+(2, 'e@mail.es', 'user2', '$2y$10$AlMsPKQsXbN2HPK7QyfG9.04fYf5BIcjAagUJvN2iqqY6utiAffwa'),
+(3, 'new@user.ocm', 'new', '$2y$10$O0N0cX9PGpR/MO.LFGQDBOcDLhvxLFiwSf6o3MNkVFOFGx9inXYSe');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -134,7 +143,7 @@ ALTER TABLE `stories`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas

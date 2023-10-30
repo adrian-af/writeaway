@@ -20,3 +20,11 @@ function load_config($name, $schema)
 	$result[] = $password[0];
 	return $result;
 }
+
+function connectionToDB($query)
+{
+	$res = load_config(dirname(__FILE__)."/configuration.xml", dirname(__FILE__)."/configuration.xsd");
+    $db = new PDO($res[0], $res[1], $res[2]); //connexion to DB
+    $result = $db->query($query);
+	return $result;
+}
