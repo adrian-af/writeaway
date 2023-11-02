@@ -19,14 +19,12 @@ if(isset($_GET['email']))
     }
     else
     {
-        $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
-        $query = "SELECT * FROM users WHERE email = '$email' AND password = '$hashedPass'";
-        $result = connectionToDB($query);
-        if($result->rowCount() > 0) //if the query returns something, the login info is correct
+        $user = $result->fetch();
+        if (password_verify($pass, $user['password'])) //checks the original password against the one in the database (NOT hashed again)
         {
-            $user = $result->fetch();
             $_SESSION['email'] =  $user['email'];
             $_SESSION['username'] = $user['username'];
+            $_SESSION['userId'] = $user['userId'];
             header("Location: lobby.php");
         }
         else
@@ -38,7 +36,7 @@ if(isset($_GET['email']))
     if($errorEmail === 1 || $errorPass === 1)
     {
         $error = true;
-        header("Location: LogIn.php?errorCode=$error&errorPass=$errorPass&errorEmail=$errorEmail&email=$email"); //returns to the signin page with true or false for the errors so it prints what was wrong
+        header("Location: LogIn.php?errorCode=$error&errorPass=$errorPass&errorEmail=$errorEmail&email=$email&incorrect=$hashedPass"); //returns to the signin page with true or false for the errors so it prints what was wrong
         return;
     }
 }
@@ -46,3 +44,5 @@ else
 {
     echo "email is not set"; //should never get here
 }
+
+

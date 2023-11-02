@@ -44,7 +44,8 @@ if(isset($_GET['email']))
     }
     
     $hashedPass = password_hash($pass, PASSWORD_DEFAULT); //function to encrypt password
-    $query = "INSERT INTO users(email, username, password) VALUES('$email', '$username', '$hashedPass');";
+    $confirmationCode = rand(10, 10000000);
+    $query = "INSERT INTO users(email, username, password, confirmationCode) VALUES('$email', '$username', '$hashedPass', '$confirmationCode');";
     $result = $db->query($query); //insert into database
     if(!$result)
     {
@@ -54,7 +55,8 @@ if(isset($_GET['email']))
     {
         $_SESSION['email'] =  $email;
         $_SESSION['username'] = $username;
-        header("Location: lobby.php"); //when it's registred, redirect to the lobby
+        $_SESSION['confirmationCode'] = $confirmationCode;
+        header("Location: verify.php"); //when it's registred, redirect to verify
     }
 }
 else

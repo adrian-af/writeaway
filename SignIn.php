@@ -126,8 +126,8 @@
             <input type="password" id="pass2" name="pass2"></input>
             <br>
             <button>Sig In</button>
-
         </form>
+        <p>Already with us?</p><a href="LogIn.php">Log in!!</a>
     </div>
     <!-- Send user name and password @ email -->
 </body>
