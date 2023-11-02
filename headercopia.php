@@ -4,20 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WriteAway</title>
-    <style>
-        body
-        {
-            margin: 0;
-        }
-        header
-        {
-            display: flex;
-            flex-direction: row;
-            background-color: red;
-            margin: 0;
-
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -26,7 +12,6 @@
             <div id='homepage'>Home</div>
             <div id='genre'>
                 Genre
-                <?php echo 'hola'?>
             </div>
             <div id='search'></div>
         </div>    

@@ -1,25 +1,6 @@
 <?php
-//function to check the configuration file that has the database parameters
-function load_config($name, $schema)
-{
-	$config = new DOMDocument();
-	$config->load($name);
-	$res = $config->schemaValidate($schema);
-	if ($res===FALSE){ 
-	   throw new InvalidArgumentException("Check configuration file");
-	} 		
-	$data = simplexml_load_file($name);	
-	$ip = $data->xpath("//ip");
-	$name = $data->xpath("//name");
-	$user = $data->xpath("//user");
-	$password = $data->xpath("//password");	
-	$conn_string = sprintf("mysql:dbname=%s;host=%s", $name[0], $ip[0]);
-	$result = [];
-	$result[] = $conn_string;
-	$result[] = $user[0];
-	$result[] = $password[0];
-	return $result;
-}
+include "./dbfunctions.php";
+session_start();
 
 if(isset($_GET['email']))
 {
@@ -28,15 +9,15 @@ if(isset($_GET['email']))
     $pass = $_GET['pass'];
     $pass2 = $_GET['pass2'];
 
-    $errorEmail = false;
-    $errorUsername = false;
-    $errorPass = false;
-    $error = false;
+    $errorEmail = 0;
+    $errorUsername = 0;
+    $errorPass = 0;
+    $error = 0;
 
     //returns error if the passwords don't match
     if($pass != $pass2) 
     {
-        $errorPass = true;
+        $errorPass = 1;
     }
 
     //gets the database information into $res from the configuration xml file and checks it complies with the xsd schema
@@ -46,19 +27,19 @@ if(isset($_GET['email']))
     $result = $db->query($query);
     if($result->rowCount() > 0) //if the query returns something, the email is registered
     {
-        $errorEmail = true;
+        $errorEmail = 1;
     }
     $query = "SELECT * FROM users WHERE username = '$username'";
     $result = $db->query($query);
     if($result->rowCount() > 0) //if the query returns something, the username is registered
     {
-        $errorUsername = true;
+        $errorUsername = 1;
     }
     
-    if($errorEmail || $errorPass || $errorUsername)
+    if($errorEmail === 1 || $errorPass === 1 || $errorUsername === 1)
     {
         $error = true;
-        header("Location: SignIn.php?errorCode=$error&errorUsername=$errorUsername&errorPass=$errorPassword&errorEmail=$errorEmail"); //returns to the signin page with true or false for the errors so it prints what was wrong
+        header("Location: SignIn.php?errorCode=$error&errorUsername=$errorUsername&errorPass=$errorPass&errorEmail=$errorEmail&email=$email&username=$username"); //returns to the signin page with true or false for the errors so it prints what was wrong
         return;
     }
     
@@ -71,7 +52,8 @@ if(isset($_GET['email']))
     }
     else
     {
-        $db->commit();
+        $_SESSION['email'] =  $email;
+        $_SESSION['username'] = $username;
         header("Location: lobby.php"); //when it's registred, redirect to the lobby
     }
 }
