@@ -23,7 +23,7 @@ include "./dbfunctions.php";
         
         $user = $_SESSION['userId'];
         //write it to the database
-        $query = 'INSERT INTO stories (userId, genreId, text, public) VALUES(' .$user .', ' .$genre .', "' .$story . '", ' .$public .');';
+        $query = 'INSERT INTO stories (userId, genreId, title, text, public) VALUES(' .$user .', ' .$genre .', "' .$title .'", "' .$story . '", ' .$public .');';
 
         $result = connectionToDB($query);
         if($result)
