@@ -3,6 +3,7 @@ body{
     width: auto;
     justify-content: center; /* Center horizontally */
     align-items: center;
+    background-image: url("./Imagenes/fondoParaInicios.jpg");
 }
 .rectangle-2 {
 	width: 448px;
@@ -10,8 +11,7 @@ body{
 	padding: 8px 8px 8px 8px;
     margin: 20px 0px 0px 0px;
 	background: #CBE8BA;
-	border-color: #000000;
-	border-width: 1px;
+	border: 2px dotted white;
 	border-style: solid;
 }
 .button-2 {
