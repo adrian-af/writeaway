@@ -1,46 +1,51 @@
 body{
-    display: flex;
+    display: grid;
+    width: auto;
     justify-content: center; /* Center horizontally */
     align-items: center;
 }
-.rectangle-1 {
-    width: 448px;
-    height: 554px;
-    padding: 8px 8px 8px 8px;
+body > .rectangle-1 {
+    display: grid;
+    width: 400px;
+    height: 450px;
+    padding: 8px;
+    margin-top: 15%;
     background: #CBE8BA;
-    border-color: #000000;
-    border-width: 1px;
+    border: 1px solid black;
     border-style: solid;
+    justify-content: center;
+    align-items: center;
 }
-.sign-in- {
-	width: 131px;
-	height: 57px;
-	color: #000000;
-	font-family: "Alkatra";
-	font-weight: 400;
-	font-size: 36px;
-	text-align: left;
-}
-.email- {
-    width: 83px;
+.label {
+    width: 93px;
     height: 32px;
     color: #232323;
-    font-family: "Helvetica";
+    font-family: "Alkatra";
     font-weight: 400;
     font-size: 18px;
     text-align: left;
 }
-.text-input-4 {
+.rectangle-1 > div {
+    width: auto;
+    height: 57px;
+    color: #000000;
+    font-family: "Alkatra";
+    font-weight: 400;
+    font-size: 36px;
+    align-self: center;
+    text-align: center;
+}
+.text-input {
     width: 145px;
     height: 27px;
     padding: 4px 8px 4px 8px;
     background: #FFFFFF;
-    color: #C0C0C0;
+    color: rgb(55, 55, 167);
     border-color: #232323;
     border-width: 1px;
     border-style: solid;
     border-radius: 3px 3px 3px 3px;
-    font-family: "Helvetica";
+    font-family: "Alkatra";
     font-weight: 400;
     font-size: 14px;
     text-align: left;
@@ -49,11 +54,11 @@ body{
     width: 266px;
     height: 18px;
     background: #FFFFFF;
-    color: #232323;
+    color: rgb(12, 12, 185);
     border-color: #232323;
     border-width: 1.5px;
     border-style: solid;
-    font-family: "Helvetica";
+    font-family: "Alkatra";
     font-weight: 400;
     font-size: 14px;
     text-align: left;
@@ -71,5 +76,9 @@ body{
     font-family: "Helvetica";
     font-weight: 400;
     font-size: 14px;
+    text-align: center;
+    align-self: center;
+}
+.notes{
     text-align: center;
 }

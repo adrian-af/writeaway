@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn</title>
-    <link rel="stylesheet" type="text/css" href="InStyles.css">
-    
+    <link href="SigInEstilo.css" rel="stylesheet">
 </head>
 <body>
     <?php
@@ -35,22 +34,38 @@
         }
     ?>
     <div class="rectangle-1">
-        <h1>Sign In form</h1>
+        <div><h1>Sign In</h1></div>
         <form action="./SignInCode.php" method="GET">
-            <div style="color: red">
-                <?php echo $text; ?>
-            </div>
-            <label for="email">Email</for>
-            <input type="email" id="email" name="email" value="<?php echo $email?>"></input><br>
-            <label for="username">Choose a username</for>
-            <input type="text" id="username" name="username" value="<?php echo $username?>"></input><br>
-            <label for="pass">Password</for>
-            <input type="password" id="pass" name="pass"></input><br>
-            <label for="pass2">Repeat your password</for>
-            <input type="password" id="pass2" name="pass2"></input>
-            <br>
-            <button>Sig In</button>
-
+            <table>
+                <tr>
+                    <td colspan="2">
+                    <div style="color: red">
+                        <?php echo $text; ?>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="label" for="email">Email</label></td>
+                    <td><input class="text-input" type="email" id="email" name="email" value="<?php echo $email?>" required ></input></td>                </tr>
+                <tr>
+                    <td><label class="label"  for="username">Choose a username</label></td>
+                    <td><input class="text-input" type="text" id="username" name="username" value="<?php echo $username?>" required></input></td>
+                </tr>
+                <tr>
+                    <td><label class="label"  for="pass">Password</label></td>
+                    <td><input class="text-input" type="password" id="pass" name="pass" required></input></td>
+                </tr>
+                <tr>
+                    <td><label class="label"  for="pass2">Repeat your password</label></td>
+                    <td><input class="text-input" type="password" id="pass2" name="pass2" required></input></td>
+                </tr>
+                <tr>
+                    <td class="notes" colspan="2"><input type="checkbox"> Confirm we are the best</td>
+                </tr>
+                <tr>
+                    <td class="notes" colspan="2"><button class="button-1">Sig In</button></td>
+                </tr>
+            </table>
         </form>
     </div>
     <!-- Send user name and password @ email -->
