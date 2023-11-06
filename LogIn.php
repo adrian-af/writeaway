@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
+    <link href="LogInEstilo.css" rel="stylesheet">
 </head>
 <body>
 <?php
@@ -27,6 +28,7 @@
             
         }
     ?>
+    <div class="rectangle-1">
     <h1>Log In Form</h1>
     <div style="color: red" id="wrong"><?php echo $text;?></div>
     <form action="./LogInCode.php" method="GET">
@@ -36,6 +38,9 @@
         <input type="password" id="pass" name="pass"></input><br>
         <button>Log in</button>
     </form>
-    <p>Not with us yet?</p><a href="SignIn.php">Sign in!!</a>
+    </div>
+    <div class="rectangle-2">
+    <p class="not-with-us-yet-">Not with us yet?</p> <button class="button-2 ">Sign IN!!</button>
+    </div>
 </body>
 </html>
