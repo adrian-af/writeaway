@@ -33,6 +33,8 @@ function connectionToDB($query)
 	return $result;
 }
 
+use PHPMailer\PHPMailer\PHPMailer;
+require dirname(__FILE__)."/../../../vendor/autoload.php";
 function send_mail($mailaddress,  $code)
 {
 	$res = load_config(dirname(__FILE__)."/configuration.xml", dirname(__FILE__)."/configuration.xsd");
@@ -43,13 +45,13 @@ function send_mail($mailaddress,  $code)
 	$mail->SMTPSecure = "tls";                 
 	$mail->Host       = "smtp.gmail.com";      
 	$mail->Port       = 587;                   
-	$mail->Username   = $res[3];  
-	$mail->Password   = $res[4];           
+	$mail->Username   = "" .$res[3][0];  
+	$mail->Password   = "" .$res[4][0];           
 	$mail->SetFrom('noreply@writeaway.com', 'WriteAway Team');
 	$mail->Subject    = "WriteAway email verification";
-	$body = "Welcome to Writeaway! To verify your account, click on this link: " .dirname(__FILE__)."verify.php?verificationCode=$code";
+	$body = "Welcome to Writeaway! To verify your account, click on this link: " .dirname(__FILE__)."/verified.php?verificationCode=$code";
 	$mail->MsgHTML($body);
-	$mail->AddAddress($mailaddress);
+	$mail->addAddress($mailaddress, 'Client');
 	if(!$mail->Send()) {
 	  return $mail->ErrorInfo;
 	} else {

@@ -24,7 +24,7 @@ if(isset($_GET['email']))
         {
             $_SESSION['email'] =  $user['email'];
             $_SESSION['username'] = $user['username'];
-            $_SESSION['userId'] = $user['userId'];
+            $_SESSION['userId'] = $user['ID'];
             header("Location: lobby.php");
         }
         else

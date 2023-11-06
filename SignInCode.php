@@ -36,6 +36,7 @@ if(isset($_GET['email']))
         $errorUsername = 1;
     }
     
+    echo $email;
     if($errorEmail === 1 || $errorPass === 1 || $errorUsername === 1)
     {
         $error = true;
@@ -56,6 +57,7 @@ if(isset($_GET['email']))
         $_SESSION['email'] =  $email;
         $_SESSION['username'] = $username;
         $_SESSION['confirmationCode'] = $confirmationCode;
+        $_SESSION['userId'] = $user['ID'];
         header("Location: verify.php"); //when it's registred, redirect to verify
     }
 }
