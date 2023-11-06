@@ -36,6 +36,7 @@ if(isset($_GET['email']))
         $errorUsername = 1;
     }
     
+    echo $email;
     if($errorEmail === 1 || $errorPass === 1 || $errorUsername === 1)
     {
         $error = true;
