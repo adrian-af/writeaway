@@ -1,0 +1,84 @@
+body{
+    display: grid;
+    width: auto;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+body > .rectangle-1 {
+    display: grid;
+    width: 400px;
+    height: 450px;
+    padding: 8px;
+    margin-top: 15%;
+    background: #CBE8BA;
+    border: 1px solid black;
+    border-style: solid;
+    justify-content: center;
+    align-items: center;
+}
+.label {
+    width: 93px;
+    height: 32px;
+    color: #232323;
+    font-family: "Alkatra";
+    font-weight: 400;
+    font-size: 18px;
+    text-align: left;
+}
+.rectangle-1 > div {
+    width: auto;
+    height: 57px;
+    color: #000000;
+    font-family: "Alkatra";
+    font-weight: 400;
+    font-size: 36px;
+    align-self: center;
+    text-align: center;
+}
+.text-input {
+    width: 145px;
+    height: 27px;
+    padding: 4px 8px 4px 8px;
+    background: #FFFFFF;
+    color: rgb(55, 55, 167);
+    border-color: #232323;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px 3px 3px 3px;
+    font-family: "Alkatra";
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+}
+.checkbox-1 {
+    width: 266px;
+    height: 18px;
+    background: #FFFFFF;
+    color: rgb(12, 12, 185);
+    border-color: #232323;
+    border-width: 1.5px;
+    border-style: solid;
+    font-family: "Alkatra";
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+}
+.button-1 {
+    width: 97px;
+    height: 27px;
+    padding: 0px 10px 0px 10px;
+    background: #EBEBEB;
+    color: #232323;
+    border-color: #232323;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px 3px 3px 3px;
+    font-family: "Helvetica";
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    align-self: center;
+}
+.notes{
+    text-align: center;
+}
