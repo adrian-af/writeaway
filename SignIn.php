@@ -68,6 +68,5 @@
             </table>
         </form>
     </div>
-    <!-- Send user name and password @ email -->
 </body>
 </html>

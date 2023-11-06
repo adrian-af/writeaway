@@ -30,8 +30,8 @@
     <h1>Log In Form</h1>
     <div style="color: red" id="wrong"><?php echo $text;?></div>
     <form action="./LogInCode.php" method="GET">
-        <label for="email" value="<?php echo $email?>">Email</for>
-        <input type="email" id="email" name="email"></input><br>
+        <label for="email">Email</for>
+        <input type="email" id="email" name="email" value="<?php echo $email?>"></input><br>
         <label for="pass">Password</for>
         <input type="password" id="pass" name="pass"></input><br>
         <button>Log in</button>

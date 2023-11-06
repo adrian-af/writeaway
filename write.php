@@ -35,6 +35,10 @@ include "./dbfunctions.php";
         </select><br>
         <label for="story">Story: </label>
         <textarea id="story" name="story"></textarea><br>
+        <input type="radio" id="private" name="public" value="0">
+        <label for="private">Private<br>
+        <input type="radio" id="public" name="public" value="1">
+        <label for="private">Public<br>
         <button>Submit</button>
     </form>
 </body>
