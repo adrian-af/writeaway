@@ -3,6 +3,7 @@ body{
     width: auto;
     justify-content: center; /* Center horizontally */
     align-items: center;
+    background-image: url("./Imagenes/fondoParaInicios.jpg");
 }
 body > .rectangle-1 {
     display: grid;
