@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "./dbfunctions.php";
 ?>
 <!DOCTYPE html>
@@ -10,33 +11,59 @@ include "./dbfunctions.php";
 </head>
 <body>
     <h1>Write your story</h1>
-    <form action="writeDB.php">
+    <?php
+    //get the elements from the form
+    if(isset($_GET['title']))
+    {
+        //store in variables
+        $title = $_GET['title'];
+        $genre = $_GET['genre'];
+        $story = $_GET['story'];
+        $public = $_GET['public'];
+        
+        $user = $_SESSION['userId'];
+        //write it to the database
+        $query = 'INSERT INTO stories (userId, genreId, text, public) VALUES(' .$user .', ' .$genre .', "' .$story . '", ' .$public .');';
+
+        $result = connectionToDB($query);
+        if($result)
+        {
+            echo "<span id='added' style='color: green'>Story added!</span>";
+        }
+        else
+        {
+            echo "<span id='added'>Error</span>";
+        }
+    }
+    ?>
+    <form action="write.php">
         <label for="title">Title: </label>
         <input type="text" id="title" name="title"></input><br>
         <label for="genre">Genre: </label>
         <select id="genre" name="genre">
-            <?php
-                $query = "SELECT * FROM genres";
-                $result = connectionToDB($query);
-                if($result->rowCount() > 0) //if the query returns nothing, the email is not registered
+        <?php
+                
+            $query = "SELECT * FROM genres";
+            $result = connectionToDB($query);
+            if($result->rowCount() > 0) //if the query returns nothing, the email is not registered
+            {
+                foreach($result as $line) //takes each result of the query
                 {
-                    foreach($result as $line) //takes each result of the query
-                    {
-                        $temp = ucfirst($line['name']); //capital first letter so it looks nicer
-                        $tempNum = $line['ID'];
-                        echo "<option value='$tempNum'>$temp</option>"; //this adds an option for each genre with the value of its name
-                    }
+                    $temp = ucfirst($line['name']); //capital first letter so it looks nicer
+                    $tempNum = $line['ID'];
+                    echo "<option value='$tempNum'>$temp</option>"; //this adds an option for each genre with the value of its name
                 }
-                else
-                {
-                    echo "can't find genres";
-                }
+            }
+            else
+            {
+                echo "can't find genres";
+            }
             ?>
         </select><br>
         <label for="story">Story: </label>
         <textarea id="story" name="story"></textarea><br>
-        <input type="radio" id="private" name="public" value="0">
         <label for="private">Private<br>
+        <input type="radio" id="private" name="public" value="0" checked>
         <input type="radio" id="public" name="public" value="1">
         <label for="private">Public<br>
         <button>Submit</button>
