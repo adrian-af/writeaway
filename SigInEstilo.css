@@ -8,7 +8,7 @@ body{
 .rectangle-1 {
     display: grid;
     width: 400px;
-    height: 450px;
+    height: 400px;
     padding: 8px;
     margin-top: 15%;
     background: #b3c262;
@@ -27,7 +27,8 @@ body{
 }
 .rectangle-1 > div {
     width: auto;
-    height: 57px;
+    height: 50px;
+    display: grid;
     color: #000000;
     font-family: "Alkatra";
     font-weight: 400;
@@ -35,6 +36,8 @@ body{
     align-self: center;
     text-align: center;
 }
+h1{margin: 0px;}
+td{padding: 5px;}
 .text-input {
     width: 145px;
     height: 27px;
