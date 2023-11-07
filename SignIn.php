@@ -63,7 +63,7 @@
                     <td><input class="text-input" type="password" id="pass2" name="pass2" required></input></td>
                 </tr>
                 <tr>
-                    <td class="notes" colspan="2"><input type="checkbox"> Confirm we are the best</td>
+                    <td class="notes" colspan="2"><input type="checkbox" required> Confirm we are the best</td>
                 </tr>
                 <tr>
                     <td class="notes" colspan="2"><button class="button-1">Sig In</button></td>

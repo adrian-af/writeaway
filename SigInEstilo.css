@@ -5,15 +5,14 @@ body{
     align-items: center;
     background-image: url("./Imagenes/fondoParaInicios.jpg");
 }
-body > .rectangle-1 {
+.rectangle-1 {
     display: grid;
     width: 400px;
     height: 450px;
     padding: 8px;
     margin-top: 15%;
-    background: #CBE8BA;
-    border: 1px solid black;
-    border-style: solid;
+    background: #b3c262;
+    border: 10px ridge #d5ca98;
     justify-content: center;
     align-items: center;
 }
@@ -41,7 +40,7 @@ body > .rectangle-1 {
     height: 27px;
     padding: 4px 8px 4px 8px;
     background: #FFFFFF;
-    color: rgb(55, 55, 167);
+    color: #66424c;
     border-color: #232323;
     border-width: 1px;
     border-style: solid;
