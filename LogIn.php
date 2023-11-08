@@ -40,11 +40,11 @@
                 </tr>
                 <tr>
                     <td><label class="label" for="email">Email</label></td>
-                    <td><input class="text-input" type="email" id="email" name="email" value="<?php echo $email?>"></input></td>
+                    <td><input class="text-input" type="email" id="email" name="email" value="<?php echo $email?>" required></input></td>
                 </tr>
                 <tr>
                     <td><label class="label" for="pass">Password</label></td>
-                    <td><input class="text-input" type="password" id="pass" name="pass"></input></td>
+                    <td><input class="text-input" type="password" id="pass" name="pass" required></input></td>
                 </tr>
                 <tr>
                     <td class="notes" colspan="2"><button>Log in</button></td>
