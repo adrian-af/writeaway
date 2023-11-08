@@ -51,6 +51,7 @@
                 </tr>
             </table>
         </form>
+        <div><img src="./Imagenes/libros.png" alt="A bookshelf with books"></div></div>
     </div>
     <div class="rectangle-2">
         <div class="not-with-us-yet-">Not with us yet?</div>

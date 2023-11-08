@@ -26,6 +26,8 @@ body{
     font-size: 36px;
     align-self: center;
     text-align: center;
+	justify-content: center;
+	align-content: center;
 }
 table{width: max-content;}
 form{
@@ -96,4 +98,11 @@ h1{margin: 0px;}
 	font-weight: 400;
 	font-size: 14px;
 	text-align: center;
+}
+.hidden{
+	display: none;
+}
+img{
+	justify-content: center;
+	height: 100px;
 }
