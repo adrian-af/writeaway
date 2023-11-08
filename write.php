@@ -45,7 +45,7 @@ include "./dbfunctions.php";
                 
             $query = "SELECT * FROM genres";
             $result = connectionToDB($query);
-            if($result->rowCount() > 0) //if the query returns nothing, the email is not registered
+            if($result->rowCount() > 0)
             {
                 foreach($result as $line) //takes each result of the query
                 {
