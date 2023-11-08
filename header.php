@@ -21,7 +21,7 @@
         {
             display: flex;
         }
-        #headerleft > *
+        #headerleft > *, #headerright > *
         {
             margin: 10px;
             padding: 10px;
@@ -38,6 +38,14 @@
         .hide
         {
             visibility: hidden;
+        }
+        .icon
+        {
+            height: 15px;
+        }
+        #user
+        {
+            height: 25px;
         }
         
     </style>
@@ -86,11 +94,16 @@
                     echo "</div>";
                 ?>
             </div>
-            <div id='search'></div>
+            <div id='search'>
+                <form action="profilesearch.php" method="GET">
+                    <input type="text" placeholder="Search users..." name="usersearched">
+                    <button><img src="./Imagenes/search.png" alt="Search button" class="icon"></button>
+                </form>
+            </div>
         </div>    
         <div id='headerright'>
             <div id='profile'>
-                <img src="Imagenes/user.png" alt="User Picture">
+                <img src="Imagenes/user.png" alt="User Picture" class="icon" id="user">
             </div>
         </div>
         

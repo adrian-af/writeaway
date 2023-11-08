@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <?php
+        include "./header.php";
+    ?>
     <div class="upper-panel">
     <h1 align='center'>This is the lobby!!</h1>
     <p>
