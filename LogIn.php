@@ -47,17 +47,17 @@
                     <td><input class="text-input" type="password" id="pass" name="pass" required></input></td>
                 </tr>
                 <tr>
-                    <td class="notes" colspan="2"><button>Log in</button></td>
+                    <td class="notes" colspan="2"><button class="button">Log in</button></td>
                 </tr>
             </table>
         </form>
         <div><img src="./Imagenes/libros.png" alt="A bookshelf with books"></div></div>
     </div>
     <div class="rectangle-2">
-        <div class="not-with-us-yet-">Not with us yet?</div>
+        <div class="toSignIn">Not with us yet?</div>
         <div>
             <a href="SignIn.php">
-            <button class="button">Sign IN!!</button>
+            <button class="button">Sign in!!</button>
         </div> 
     </div>
 </body>

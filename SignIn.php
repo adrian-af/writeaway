@@ -66,7 +66,7 @@
                     <td class="notes" colspan="2"><input type="checkbox" required> Confirm we are the best</td>
                 </tr>
                 <tr>
-                    <td class="notes" colspan="2"><button class="button-1">Sig In</button></td>
+                    <td class="notes" colspan="2"><button class="button">Sig In</button></td>
                 </tr>
             </table>
         </form>

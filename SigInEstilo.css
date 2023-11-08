@@ -20,7 +20,7 @@ body{
     width: 93px;
     height: 32px;
     color: #232323;
-    font-family: "Alkatra";
+    font-family: "Swift";
     font-weight: 400;
     font-size: 18px;
     text-align: left;
@@ -30,7 +30,7 @@ body{
     height: 50px;
     display: grid;
     color: #000000;
-    font-family: "Alkatra";
+    font-family: "Swift";
     font-weight: 400;
     font-size: 36px;
     align-self: center;
@@ -48,7 +48,7 @@ td{padding: 5px;}
     border-width: 1px;
     border-style: solid;
     border-radius: 3px 3px 3px 3px;
-    font-family: "Alkatra";
+    font-family: "Swift";
     font-weight: 400;
     font-size: 14px;
     text-align: left;
@@ -61,26 +61,28 @@ td{padding: 5px;}
     border-color: #232323;
     border-width: 1.5px;
     border-style: solid;
-    font-family: "Alkatra";
+    font-family: "Swift";
     font-weight: 400;
     font-size: 14px;
     text-align: left;
 }
-.button-1 {
-    width: 97px;
-    height: 27px;
-    padding: 0px 10px 0px 10px;
-    background: #EBEBEB;
-    color: #232323;
-    border-color: #232323;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 3px 3px 3px 3px;
-    font-family: "Helvetica";
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    align-self: center;
+.button{
+	width: 120px;
+	height: 32px;
+	padding: 0px 10px 0px 10px;
+	background: linear-gradient(to bottom, #66424c, #c72546 );
+	color: #232323;
+	border:1px solid #232323;
+	border-radius: 3px 3px 3px 3px;
+	font-family: "Swift";
+	font-weight: 400;
+	font-size: 16px;
+	text-align: center;
+}
+button:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
 }
 .notes{
     text-align: center;
