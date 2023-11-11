@@ -7,12 +7,13 @@
     <title>Inicio</title>
 </head>
 <body>
-    <header>
+    <?php
+        include "./header.php";
+    ?>
     <h1>Write Away</h1>
     <a href="LogIn.php">
     <button>Ir a Log in</button>
     </a>
-    </header>
     <hr>
 </body>
 </html>

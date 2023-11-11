@@ -37,7 +37,7 @@
         }
     ?>
     <div class="rectangle-1">
-        <div><h1>Sign In</h1></div>
+        <div><h1>Sign Up</h1></div>
         <form action="./SignInCode.php" method="GET">
             <table>
                 <tr>
@@ -49,7 +49,8 @@
                 </tr>
                 <tr>
                     <td><label class="label" for="email">Email</label></td>
-                    <td><input class="text-input" type="email" id="email" name="email" value="<?php echo $email?>" required ></input></td>                </tr>
+                    <td><input class="text-input" type="email" id="email" name="email" value="<?php echo $email?>" required ></input></td>
+                </tr>
                 <tr>
                     <td><label class="label"  for="username">Choose a username</label></td>
                     <td><input class="text-input" type="text" id="username" name="username" value="<?php echo $username?>" required></input></td>
@@ -66,7 +67,7 @@
                     <td class="notes" colspan="2"><input type="checkbox" required> Confirm we are the best</td>
                 </tr>
                 <tr>
-                    <td class="notes" colspan="2"><button class="button">Sig In</button></td>
+                    <td class="notes" colspan="2"><button class="button">Sign Up</button></td>
                 </tr>
             </table>
         </form>

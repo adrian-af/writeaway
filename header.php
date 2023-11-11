@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WriteAway</title>
+    <link href="header.css" rel="stylesheet">
     <style>
         body
         {
@@ -12,7 +13,8 @@
         header
         {
             display: flex;
-            background-color: azure;
+            background-color: #768a4f;
+            width: 100%;
             height: 50px;
             margin: 0;
             justify-content: space-between;
@@ -31,12 +33,11 @@
         {
             cursor: pointer;
         }
-        .show
-        {
+        .show{
+            animation: slidedown 3s ease forwards;
             visibility: visible;
         }
-        .hide
-        {
+        .hide{
             visibility: hidden;
         }
         .icon

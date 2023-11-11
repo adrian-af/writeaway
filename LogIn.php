@@ -8,7 +8,7 @@
     <link href="LogInEstilo.css" rel="stylesheet">
 </head>
 <body>
-<?php
+    <?php
         $text = "";
         $email = "";
         $username = "";
@@ -57,7 +57,7 @@
         <div class="toSignIn">Not with us yet?</div>
         <div>
             <a href="SignIn.php">
-            <button class="button">Sign in!!</button>
+            <button class="button">Sign up!!</button>
         </div> 
     </div>
 </body>

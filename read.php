@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include "./header.php";
+    ?>
     <div>
     <?php
         session_start();
