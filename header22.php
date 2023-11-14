@@ -35,7 +35,7 @@
             </div>
             <div id='search'>
                 <form action="profilesearch.php" method="GET">
-                    <input type="text" placeholder="Search users..." name="usersearched">
+                    <input type="text" placeholder="Search users..." name="usersearched" name='usersearched'>
                     <button><img src="./Imagenes/search.png" alt="Search button" class="icon"></button>
                 </form>
             </div>
