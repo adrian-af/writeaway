@@ -47,9 +47,7 @@
                 </div>
                 <div class="dropdown-content">
                     <a href='./profile.php'>Profile</a>
-                    <a href='./LogIn.php'>Log out
-                        
-                    </a>
+                    <a href='./LogIn.php?logout=1' >Log out</a>
                 </div>
             </div>
         </div>
