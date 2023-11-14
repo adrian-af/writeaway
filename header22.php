@@ -42,10 +42,8 @@
         </div>    
         <div id='headerright'>
             <div  class='dropdown'>
-                <div id='profile' class='dropdownbtn'>
-                    <img src="Imagenes/user.png" alt="User Picture" class="icon" id="user">
-                </div>
-                <div class="dropdown-content">
+                <img src="Imagenes/user.png" alt="User Picture" class="dropbtn" id="user">
+                <div class="dropdown-content2">
                     <a href='./profile.php'>Profile</a>
                     <a href='./LogIn.php?logout=1' >Log out</a>
                 </div>
