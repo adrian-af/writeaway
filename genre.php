@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        include "./header22.php";
+        include "./header.php";
     ?>
     <?php
     include "./dbfunctions.php";
