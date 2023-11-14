@@ -34,7 +34,7 @@ header {
 #search {
     width: 200px;
 }
-#icon {
+.icon {
     height: 10px;
 }
 #user {
