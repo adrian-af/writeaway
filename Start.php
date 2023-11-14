@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        include "./header.php";
+        include "./header22.php";
     ?>
     <h1>Write Away</h1>
     <a href="LogIn.php">
