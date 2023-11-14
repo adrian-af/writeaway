@@ -10,7 +10,6 @@
         include "./header22.php";
     ?>
     <?php
-    session_start();
     include "./dbfunctions.php";
     $genre = $_GET['genre'];
     $query = "SELECT * FROM stories WHERE genreId LIKE $genre";

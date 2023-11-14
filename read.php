@@ -11,7 +11,6 @@
     ?>
     <div>
     <?php
-        session_start();
         include "./dbfunctions.php";
         $query = "SELECT * FROM users WHERE ID LIKE $userId";
         $result = connectionToDB($query);
