@@ -19,10 +19,8 @@ header {
 #headerright > *{
     width: 100px;
     height: 50px;
-    font-size: large;
     text-align: center;
     justify-content: center;
-    color: #d5ca98;
 }
 #headerleft > * {
     width: 130px;
@@ -32,7 +30,6 @@ header {
     text-align: center;
     justify-content: center;
     color: #d5ca98;
-    
 }
 #search {
     width: 200px;
@@ -73,6 +70,16 @@ header {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
+.dropdown-content2{
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    background-color: #d5ca98;
+    min-width: 100px;
+    margin-top: -4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 .dropdown-content a {
     color: #66424c;
     padding: 12px 16px;
@@ -80,10 +87,15 @@ header {
     display: block;
     height: 15px;
 }
-.dropdown-content:nth-child(2){
-    min-width: 100px;
-    margin-top: -5px;
+.dropdown-content2 a {
+    color: #66424c;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    height: 15px;
 }
 .dropdown-content a:hover {background-color: rgba(216, 209, 177, 0.729);}
+.dropdown-content2 a:hover {background-color: rgba(216, 209, 177, 0.729);}
 .dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content2 {display: block;}
 .dropdown:hover .dropbtn, .dropdown:hover {background-color: #b3c262;}

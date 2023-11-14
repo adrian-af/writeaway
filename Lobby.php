@@ -14,9 +14,6 @@
    
     <div class="upper-panel">
     <h1 align='center'>This is the lobby!!</h1>
-    <p>
-        
-    </p>
     </div>
     <div class="bottom-panel">
     </div>

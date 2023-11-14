@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
-    <link href="LogInEstilo.css" rel="stylesheet">
+    <link href="FormStyles.css" rel="stylesheet">
 </head>
 <body>
     <?php
+        session_start();
         $text = "";
         $email = "";
         $username = "";
@@ -26,6 +27,9 @@
                 $text .= " Incorrect password.";
             }
             
+        }
+        if(isset($_GET['logout'])){
+            session_destroy();
         }
     ?>
     <div class="rectangle-1">

@@ -102,9 +102,6 @@ button:hover{
     transform: rotate(-3deg) scale(1.1);
     box-shadow: 0px 3px 5px rgba(0,0,0,.4);
 }
-.hidden{
-	display: none;
-}
 img{
 	justify-content: center;
 	height: 100px;
@@ -112,4 +109,17 @@ img{
 .toSignIn{
 	font-size: medium;
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.checkbox-1 {
+    width: 266px;
+    height: 18px;
+    background: #FFFFFF;
+    color: rgb(12, 12, 185);
+    border-color: #232323;
+    border-width: 1.5px;
+    border-style: solid;
+    font-family: "Swift";
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
 }
