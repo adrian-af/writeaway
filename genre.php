@@ -10,7 +10,6 @@
         include "./header.php";
     ?>
     <?php
-    include "./dbfunctions.php";
     $genre = $_GET['genre'];
     $query = "SELECT * FROM stories WHERE genreId LIKE $genre";
     $result = connectionToDB($query);
@@ -28,7 +27,7 @@
             $ID = $line['ID'];
 
             echo "<div id='$ID'>";
-                echo "<div class='title'><a href='./read.php?id=$ID'>$title</a></div>";
+                echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a></div>";
                 echo "<div class='content'>$content...</div>";
                 echo "<div class='dateTime'>";
                 echo $formattedDatetime; 

@@ -9,7 +9,7 @@
     <div>
         <?php
         session_start();
-        include "./dbfunctions.php";
+        include "./header.php";
         $term = $_GET['usersearched'];
             $query = "SELECT * FROM users WHERE username LIKE '%$term%'";
             $result = connectionToDB($query);

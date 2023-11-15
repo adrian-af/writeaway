@@ -7,8 +7,7 @@
 </head>
 <body>
     <?php
-    session_start();
-    include "./dbfunctions.php";
+    include "./header.php";
     if(isset($_GET['id']))
     {
         $storyId = $_GET['id'];
@@ -25,7 +24,7 @@
         echo "<div>";
         echo "<h2>$storyTitle</h2>";
         echo "<div>$storyDatetime</div>";
-        echo "<p>$storyText</p>";
+        echo "<p><pre>$storyText</pre></p>";
     }
     ?>
 </body>

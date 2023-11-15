@@ -6,7 +6,7 @@
     <title>Document</title>
     <?php
         session_start();
-        include "./dbfunctions.php";
+        include "./header.php";
         if(isset($_GET['id']))
         {
             $userId = $_GET['id'];

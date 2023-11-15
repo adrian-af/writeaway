@@ -6,8 +6,6 @@ if(isset($_FILES['photo']))
 {
     //echo $_POST['photo'];
     $file =addslashes(file_get_contents($_FILES['photo']['tmp_name']));
-    
-    //$photo = addslashes(file_get_contents($_POST['photo']['tmp_name']));
 
     $user = $_SESSION['userId'];
     //write it to the database
@@ -22,7 +20,7 @@ if(isset($_FILES['photo']))
     {
         echo "mal";
     }
-    //header("Location: profile.php");
+    header("Location: profile.php");
 }
 else
 {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "./dbfunctions.php";
+include "./header.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
