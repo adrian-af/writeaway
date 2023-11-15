@@ -8,7 +8,6 @@
 <body>
     <div>
         <?php
-        session_start();
         include "./header.php";
         $term = $_GET['usersearched'];
             $query = "SELECT * FROM users WHERE username LIKE '%$term%'";

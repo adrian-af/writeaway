@@ -13,6 +13,10 @@ include "./header.php";
     <h1>Write your story</h1>
     <?php
     //get the elements from the form
+    if(!isset($_SESSION['userId']))
+    {
+        header("Location: logIn.php");
+    }
     if(isset($_GET['title']))
     {
         //store in variables
@@ -20,10 +24,12 @@ include "./header.php";
         $genre = $_GET['genre'];
         $story = $_GET['story'];
         $public = $_GET['public'];
-        
+        $safeStory = str_replace("\"", "&ldquo;", $content);
+        $safeStory = str_replace(chr(39), "&#39;", $safeContent);
+
         $user = $_SESSION['userId'];
         //write it to the database
-        $query = 'INSERT INTO stories (userId, genreId, title, text, public) VALUES(' .$user .', ' .$genre .', "' .$title .'", "' .$story . '", ' .$public .');';
+        $query = 'INSERT INTO stories (userId, genreId, title, text, public) VALUES(' .$user .', ' .$genre .', "' .$title .'", "' .$safeStory . '", ' .$public .');';
 
         $result = connectionToDB($query);
         if($result)

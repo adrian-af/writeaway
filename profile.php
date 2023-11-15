@@ -6,7 +6,10 @@
     <title>Document</title>
     <?php
         include "./header.php";
-        session_start();
+        if(!isset($_SESSION['userId']))
+        {
+            header("Location: logIn.php");
+        }
         $user = $_SESSION['username'];
         $userId = $_SESSION['userId'];
         $query = "SELECT * FROM users WHERE ID LIKE $userId";
