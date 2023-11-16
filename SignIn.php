@@ -72,5 +72,12 @@
             </table>
         </form>
     </div>
+    <div class="rectangle-2">
+            <div class="toSignIn">Already with us?</div>
+            <div>
+                <a href="LogIn.php">
+                <button class="button">Log in!!</button>
+            </div>
+        </div>
 </body>
 </html>
