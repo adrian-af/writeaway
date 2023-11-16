@@ -14,6 +14,34 @@
    
     <div class="upper-panel">
     <h1 align='center'>This is the lobby!!</h1>
+    
+    <?php
+    $query = "SELECT * FROM stories ORDER BY datetime LIMIT 10";
+    
+    $result = connectionToDB($query);
+
+    if($result->rowCount() > 0) //if the query returns nothing, the email is not registered
+    {
+        foreach($result as $line) //takes each result of the query
+        {
+            $title = $line['title'];
+            $content = substr($line['text'], 0, 50);
+            $mysqlDatetime = $line['datetime'];
+            $datetime = new DateTime($mysqlDatetime);
+            $formattedDatetime = $datetime->format('Y-m-d H:i:s');
+
+            $ID = $line['ID'];
+
+            echo "<div id='$ID'>";
+                echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a></div>";
+                echo "<div class='content'>$content...</div>";
+                echo "<div class='dateTime'>";
+                echo $formattedDatetime; 
+                echo "</div>";
+            echo "</div>";
+        }
+    }
+    ?>
     </div>
     <div class="bottom-panel">
     </div>

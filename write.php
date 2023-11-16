@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "./header.php";
 ?>
 <!DOCTYPE html>
@@ -17,15 +16,15 @@ include "./header.php";
     {
         header("Location: logIn.php");
     }
-    if(isset($_GET['title']))
+    if(isset($_POST['title']))
     {
         //store in variables
-        $title = $_GET['title'];
-        $genre = $_GET['genre'];
-        $story = $_GET['story'];
-        $public = $_GET['public'];
-        $safeStory = str_replace("\"", "&ldquo;", $content);
-        $safeStory = str_replace(chr(39), "&#39;", $safeContent);
+        $title = $_POST['title'];
+        $genre = $_POST['genre'];
+        $story = $_POST['story'];
+        $public = $_POST['public'];
+        $safeStory = str_replace("\"", "&ldquo;", $story);
+        $safeStory = str_replace(chr(39), "&#39;", $safeStory);
 
         $user = $_SESSION['userId'];
         //write it to the database
@@ -42,7 +41,7 @@ include "./header.php";
         }
     }
     ?>
-    <form action="write.php">
+    <form action="write.php" method='POST'>
         <label for="title">Title: </label>
         <input type="text" id="title" name="title"></input><br>
         <label for="genre">Genre: </label>
