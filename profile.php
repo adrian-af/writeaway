@@ -15,6 +15,17 @@
         $query = "SELECT * FROM users WHERE ID LIKE $userId";
         $result = connectionToDB($query);
     ?>
+    <script>
+        function confirmDelete(id)
+        {
+            let confirmation = "Are you sure you want to delete the story?";
+            if(confirm(confirmation) == true)
+            {
+                var url = "deleteStory.php?id=" + id;
+                window.location.replace(url);
+            }
+        }
+    </script>
 </head>
 <body>
     <div>
@@ -66,7 +77,8 @@
                     $ID = $line['ID'];
 
                     echo "<div id='$ID'>";
-                        echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a> - <a href='./editStory.php?id=$ID'>Edit</a> <a href='deleteStory.php?id=$ID'>Delete</a></div>";
+                        echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a> - <a href='./editStory.php?id=$ID'>Edit</a>
+                         <a class='delete' onclick='confirmDelete(this.id)' id='$ID'>Delete</a></div>";
                         echo "<div class='content'>$content...</div>";
                         echo "<div class='dateTime'>";
                         echo $formattedDatetime; 
