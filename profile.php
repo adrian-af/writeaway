@@ -35,7 +35,7 @@
                     }
                     echo $userpfp;
                 ?>" alt="user profile picture" style='width: 100px'>
-                <img src="./Imagenes/edit.png" alt="edit button" style="width: 20px" onclick="window.location='./changeImg.php'">
+                <img src="./Imagenes/edit.png" alt="edit button" style="width: 20px" onclick="window.location='./changeImg.html'">
             </div>
         </div>
         <div>

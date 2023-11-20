@@ -42,7 +42,25 @@
         </div>    
         <div id='headerright'>
             <div  class='dropdown'>
-                <img src="Imagenes/user.png" alt="User Picture" class="dropbtn" id="user">
+                <img src="
+                <?php
+                $userId = $_SESSION['userId'];
+                $query = "SELECT * FROM users WHERE ID LIKE $userId";
+                $result = connectionToDB($query);
+                if($result)
+                {
+                    $user = $result->fetch();
+                    if($user['photo'] != NULL)
+                    {
+                        $userpfp = "data:image/jpg;charset=utf8;base64," . base64_encode($user['photo']);
+                    }
+                    else
+                    {
+                        $userpfp = "./Imagenes/user.png";
+                    }
+                }
+                echo $userpfp;
+                ?>" alt="User Picture" class="dropbtn" id="user">
                 <div class="dropdown-content2">
                     <a href='./profile.php'>Profile</a>
                     <a href='./LogIn.php?logout=1' >Log out</a>
