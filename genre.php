@@ -36,6 +36,9 @@
                 echo "</div>";
             echo "</div>";
         }
+    }else{
+        echo "<h1>There's no stories for this genre!</h1>";
+        echo '<a href="./write.php"><button class="button">Start writing!</button></a>';
     }
     ?>
     </div>

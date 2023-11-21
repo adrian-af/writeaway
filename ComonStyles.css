@@ -6,10 +6,10 @@ body{
 
 }
 .primero {
-    background: rgba(213, 202, 152, 0.8);
+    background: rgba(213, 202, 152, 0.95);
     margin: 2.5%  20% 0 20%;
     padding: 20px 0% 0 5%;
-    height: auto;
+    height: 100%;
     border: 1px solid black;
     display: grid;
 }
@@ -54,6 +54,8 @@ body{
 .container{
     border: 1px solid black;
     margin: 3px;
+    margin-bottom: 6px;
+    background: #b3c262;
 }
 .title{
     text-align: left;
@@ -63,4 +65,23 @@ body{
 }
 .dateTime{
     text-align: right;
+}
+/*For buttons*/
+.button{
+	width: 120px;
+	height: 32px;
+	padding: 0px 10px 0px 10px;
+	background: linear-gradient(to bottom, #66424c, #c72546 );
+	color: #232323;
+	border:1px solid #232323;
+	border-radius: 3px 3px 3px 3px;
+	font-family: "Swift";
+	font-weight: 400;
+	font-size: 16px;
+	text-align: center;
+}
+button:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
 }
