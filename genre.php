@@ -26,10 +26,14 @@
             $datetime = new DateTime($mysqlDatetime);
             $formattedDatetime = $datetime->format('Y-m-d H:i:s');
 
+            $subquery = "SELECT * FROM users WHERE ID = $userId";
+            $subresult = connectionToDB($subquery);
+            $subline = $subresult->fetch();
+            $username = $subline['username'];
             $ID = $line['ID'];
 
             echo "<div id='$ID' class='container'>";
-                echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a></div>";
+                echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a> by <a href='./otherProfile.php?id=$userId'>$username</a></div>";
                 echo "<div class='content'>$content...</div>";
                 echo "<div class='dateTime'>";
                 echo $formattedDatetime; 
