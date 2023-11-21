@@ -6,21 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WriteAway</title>
     <link href="ComonStyles.css" rel="stylesheet">
-    <style>
-        .container{
-            border: 1px solid black;
-            margin: 3px;
-        }
-        .title{
-            text-align: left;
-        }
-        .content{
-            text-align: justify;
-        }
-        .dateTime{
-            text-align: right;
-        }
-    </style>
 </head>
 <?php
         include "./header.php";
@@ -29,7 +14,7 @@
    
     <div class="primero">
         <h1 align='center'>This is the lobby!!</h1>
-        
+        <h2>Last updates</h2>
         <?php
         $query = "SELECT * FROM stories ORDER BY datetime LIMIT 10";
         
