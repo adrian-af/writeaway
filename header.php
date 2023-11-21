@@ -33,6 +33,7 @@
                     ?>
                 </div>
             </div>
+            <div id="homepage"><a href="./write.php">Start Writing</a></div>
             <div id='search'>
                 <form action="profilesearch.php" method="GET">
                     <input type="text" placeholder="Search users..." name="usersearched">
@@ -64,6 +65,7 @@
                 <div class="dropdown-content2">
                     <a href='./profile.php'>Profile</a>
                     <a href='./LogIn.php?logout=1' >Log out</a>
+                    <a href="./Start.php">About us</a>
                 </div>
             </div>
         </div>

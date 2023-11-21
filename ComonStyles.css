@@ -6,7 +6,7 @@ body{
 
 }
 .primero {
-    background: rgba(213, 202, 152, 0.44);
+    background: rgba(213, 202, 152, 0.8);
     margin: 2.5%  20% 0 20%;
     padding: 20px 0% 0 5%;
     height: auto;
@@ -49,4 +49,18 @@ body{
 }
 .signUp{
     float: right;
+}
+/* For stories */
+.container{
+    border: 1px solid black;
+    margin: 3px;
+}
+.title{
+    text-align: left;
+}
+.content{
+    text-align: justify;
+}
+.dateTime{
+    text-align: right;
 }
