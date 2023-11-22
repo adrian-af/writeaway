@@ -13,19 +13,25 @@
     <div class="primero">
     <?php
     $genre = $_GET['genre'];
+    $queryGenre = "SELECT * FROM genres WHERE ID LIKE $genre";
+    $resultGenre = connectionToDB($queryGenre);
+    $genreLine = $resultGenre->fetch();
+    $genreName = ucfirst($genreLine['name']);
+    echo "<h1>$genreName</h1>";
     $query = "SELECT * FROM stories WHERE genreId LIKE $genre ORDER BY datetime DESC";
     $result = connectionToDB($query);
 
-    if($result->rowCount() > 0) //if the query returns nothing, the email is not registered
+    if($result->rowCount() > 0)
     {
-        foreach($result as $line) //takes each result of the query
+        foreach($result as $line)
         {
             $title = $line['title'];
             $content = substr($line['text'], 0, 50);
             $mysqlDatetime = $line['datetime'];
             $datetime = new DateTime($mysqlDatetime);
             $formattedDatetime = $datetime->format('d-m-Y H:i:s');
-            $ID = $line['userId'];
+            $ID = $line['ID'];
+            $userId = $line['userId'];
 
             $subquery = "SELECT * FROM users WHERE ID = $userId";
             $subresult = connectionToDB($subquery);

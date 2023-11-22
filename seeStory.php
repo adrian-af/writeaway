@@ -14,7 +14,6 @@
         $query = "SELECT * FROM stories WHERE ID LIKE $storyId";
         $result = connectionToDB($query);
         $story = $result->fetch();
-
         $storyTitle = $story['title'];
         $storyText = $story['text'];
 

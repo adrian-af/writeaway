@@ -30,14 +30,15 @@
                 $datetime = new DateTime($mysqlDatetime);
                 $formattedDatetime = $datetime->format('d-m-Y H:i:s');
 
-                $ID = $line['userId'];
-                $subquery = "SELECT * FROM users WHERE ID LIKE $ID";
+                $ID = $line['ID'];
+                $userId = $line['userId'];
+                $subquery = "SELECT * FROM users WHERE ID LIKE $userId";
                 $subresult = connectionToDB($subquery);
                 $subline = $subresult->fetch();
                 $username = $subline['username'];
 
                 echo "<div id='$ID' class='container'>";
-                    echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a> by <a href='./otherProfile.php?id=$ID'>$username</a></div>";
+                    echo "<div class='title'><a href='./seeStory.php?id=$ID'>$title</a> by <a href='./otherProfile.php?id=$userId'>$username</a></div>";
                     echo "<div class='content'>$content...</div>";
                     echo "<div class='dateTime'>";
                     echo $formattedDatetime; 
