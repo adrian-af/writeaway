@@ -13,7 +13,7 @@
     ?>
     <div class="primero">
         <h1>Welcome to</h1>
-        <img class="logotipos" src="Imagenes/logotipos.png">
+        <img class="logotipos" src="Imagenes/logotipos.png" alt="Logotype">
         <div class="wrapper">
             <div class="logIn">
                 <p>Are you with us already?</p>
@@ -25,9 +25,9 @@
             </div>
         </div>
         <div>
-            <img src="./Imagenes/libros.png" style="width:10%;">
-            <img src="./Imagenes/libros.png" style="width:10%;">
-            <img src="./Imagenes/libros.png" style="width:10%;">
+            <img src="./Imagenes/libros.png" style="width:10%;" alt="Books image">
+            <img src="./Imagenes/libros.png" style="width:10%;" alt="Books image">
+            <img src="./Imagenes/libros.png" style="width:10%;" alt="Books image">
     </div>
         <div>
             <h3 class="subtitle">What is this web?</h3>

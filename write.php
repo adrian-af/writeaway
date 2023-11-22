@@ -41,6 +41,7 @@ include "./header.php";
             {
                 echo "<span id='added'>Error</span>";
             }
+<<<<<<< HEAD
         }
         ?>
         <form action="write.php" method='POST'>
@@ -76,5 +77,17 @@ include "./header.php";
             <button>Submit</button>
         </form>
     </div>
+=======
+            ?>
+        </select><br>
+        <label for="story">Story:</label><br>
+        <textarea id="story" name="story"></textarea><br>
+        <input type="radio" id="private" name="public" value="0" checked>
+        <label for="private">Private<br>
+        <input type="radio" id="public" name="public" value="1">
+        <label for="private">Public<br>
+        <button>Submit</button>
+    </form>
+>>>>>>> 4b787742a70567d26ae0b428c52a171cc8b844ed
 </body>
 </html>

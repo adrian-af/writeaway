@@ -13,7 +13,7 @@
     <div class="primero">
     <?php
     $genre = $_GET['genre'];
-    $query = "SELECT * FROM stories WHERE genreId LIKE $genre";
+    $query = "SELECT * FROM stories WHERE genreId LIKE $genre ORDER BY datetime DESC";
     $result = connectionToDB($query);
 
     if($result->rowCount() > 0) //if the query returns nothing, the email is not registered
@@ -24,8 +24,8 @@
             $content = substr($line['text'], 0, 50);
             $mysqlDatetime = $line['datetime'];
             $datetime = new DateTime($mysqlDatetime);
-            $formattedDatetime = $datetime->format('Y-m-d H:i:s');
-            $ID = $line['ID'];
+            $formattedDatetime = $datetime->format('d-m-Y H:i:s');
+            $ID = $line['userId'];
 
             $subquery = "SELECT * FROM users WHERE ID = $userId";
             $subresult = connectionToDB($subquery);
