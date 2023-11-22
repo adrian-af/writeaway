@@ -16,7 +16,7 @@
             $email = $_SESSION['email'];
             //mandarlo por email
             $sent = send_mail($email, $code);
-            //si todo bien, mostrar "mira tu email
+            //si todo bien, mostrar "mira tu email"
             if($sent)
             {
                 echo 'Check your mail to activate your account!';
@@ -28,5 +28,14 @@
             }
         ?>
     </p>
+    <script>
+        function goback()
+        {
+            setTimeout(() => {
+                window.location.href = "./Login.php";
+            }, 5000);
+        }
+        window.onload = goback;
+    </script>
 </body>
 </html>

@@ -20,7 +20,7 @@ if(isset($_GET['email']))
     else
     {
         $user = $result->fetch();
-        if (password_verify($pass, $user['password'])) //checks the original password against the one in the database (NOT hashed again)
+        if (password_verify($pass, $user['password'])) //checks the original password (NOT hashed again) against the one in the database 
         {
             $_SESSION['email'] =  $user['email'];
             $_SESSION['username'] = $user['username'];
