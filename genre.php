@@ -25,7 +25,7 @@
             $mysqlDatetime = $line['datetime'];
             $datetime = new DateTime($mysqlDatetime);
             $formattedDatetime = $datetime->format('Y-m-d H:i:s');
-            $ID = $line['ID'];
+            $ID = $line['userId'];
 
             $subquery = "SELECT * FROM users WHERE ID = $userId";
             $subresult = connectionToDB($subquery);
