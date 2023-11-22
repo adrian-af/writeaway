@@ -51,7 +51,8 @@
         </div>
         <div>
             <div id='about'>
-                <p>About <?php echo $user['username']; ?>:</p>
+                <p>About <?php echo $user['username']; ?>:
+                <img src="./Imagenes/edit.png" alt="edit button" style="width: 20px" onclick="window.location='./changeBio.html'"></p>
                 <p><?php echo $user['about'];?></p>
             </div>
             <?php
