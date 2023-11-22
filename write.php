@@ -65,10 +65,10 @@ include "./header.php";
             }
             ?>
         </select><br>
-        <label for="story">Story: </label>
+        <label for="story">Story:</label><br>
         <textarea id="story" name="story"></textarea><br>
-        <label for="private">Private<br>
         <input type="radio" id="private" name="public" value="0" checked>
+        <label for="private">Private<br>
         <input type="radio" id="public" name="public" value="1">
         <label for="private">Public<br>
         <button>Submit</button>
