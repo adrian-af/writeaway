@@ -30,10 +30,6 @@
             {
                 $text .= " The passwords do not match.";
             }
-            if($_GET['errorVerify'] == '1')
-            {
-                $text .= " There was an error verifying your email. Please try again.";
-            }
         }
     ?>
     <div class="rectangle-1">
