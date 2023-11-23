@@ -9,12 +9,6 @@ include "./header.php";
     <title>Write a story</title>
     <link rel="stylesheet" href="ComonStyles.css">
     <style>
-        .primero > * > *{
-            border:1px solid black;
-        }
-        .primero > * > *>*{
-            border:1px solid black;
-        }
         p{
             width: max-content;
             text-align: left;
@@ -31,6 +25,16 @@ include "./header.php";
         }
         .private, .public {
             width: max-content;
+
+        }
+        .public{
+            float: right;
+        }
+        .private{
+            float: left;
+        }
+        input:nth-child(2),select{
+            background: linear-gradient(to bottom, #d5ca98, #b3c262);
         }
     </style>
 </head>
@@ -96,19 +100,19 @@ include "./header.php";
                 ?>
             </select>
         </div>
-        <div class="content">  
-            <p><label for="story">Story:</label></p>
-            <textarea id="story" name="story"></textarea>
-        </div>
-        <div>
-            <div class="private">
-                <label for="private">Private</label>
+        <div class="content">
+            <div>
                 <input type="radio" id="private" name="public" value="0" checked>
+                <label for="private">Private</label>
             </div>
-            <div class="public">
+            <div>
                 <input type="radio" id="public" name="public" value="1">
                 <label for="private">Public</label>
             </div>
+        </div>
+        <div class="content">
+            <p><label for="story">Story:</label></p>
+            <textarea id="story" name="story"></textarea>
         </div>
         <button class="button">Submit</button>
     </form>

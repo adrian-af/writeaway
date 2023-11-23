@@ -1,14 +1,30 @@
+<?php
+include "./header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="ComonStyles.css" rel="stylesheet">
+    <style>
+        .primero{
+            display: flex;
+        }
+        .userBox{
+            float: left;
+            width:min-content;
+        }
+        .about{
+            white-space: pre-wrap;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div class="primero">
         <?php
-        include "./header.php";
         $term = $_GET['usersearched'];
             $query = "SELECT * FROM users WHERE username LIKE '%$term%'";
             $result = connectionToDB($query);
@@ -23,7 +39,7 @@
 
                     $ID = $line['ID'];
 
-                    echo "<div id='$ID'>";
+                    echo "<div id='$ID' class='userBox'>";
                     echo "<img src=";
                     
                     if($photo != NULL)
@@ -39,7 +55,8 @@
                     echo " alt='user profile picture' style='width: 100px'>";
                     echo "<div>";
                         echo "<div class='username'><a href='otherProfile.php?id=$id'>$username</a></div>";
-                        echo "<div>$about</div>";
+                        echo "<div class='about'>$about</div>";
+                    echo "</div>";
                     echo "</div>";
                 }
             }
